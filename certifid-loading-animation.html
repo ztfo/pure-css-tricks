@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CertifID - Loading Animation</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+
+        <style>
+
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color:#ccc;
+            }
+
+            @keyframes loadingline {
+                0% { background-color: #ddd; }
+                50% { background-color: #2E76B5}
+                0% { background-color: #ddd; }
+            }
+
+            .loading-overlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: calc(100vh);
+                min-height: 750px;
+            }
+
+            .loading-overlay p {
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-size: 14px;
+            }
+
+            .loading-lines span {
+                display: inline-block;
+                width: 35px;
+                height: 3px;
+                border-radius: 999px;
+                background-color: #eee;
+            }
+
+            .animation {
+                text-align: center;
+            }
+
+            .loading-lines {
+                margin: 0 auto;
+            }
+
+            .animation img {
+                display: inline-block;
+                margin-right: -17px;
+            }
+
+            .loading-lines span:first-child {
+                animation: loadingline 2s ease infinite;
+            }
+
+            .loading-lines span:nth-child(2) {
+                animation: loadingline 2s ease .5s infinite;
+            }
+
+            .loading-lines span:last-child {
+                animation: loadingline 2s ease 1s infinite;
+            }
+
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <section class="loading-overlay"> 
+            <div class="animation">
+                <img src="https://certifid.com/wp-content/uploads/2020/04/certifid-icon-regular.png" alt="CertifID Icon" />
+                <div class="loading-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>Loading...</p>
+            </div>
+        </section>
+    </body>
+</html>
